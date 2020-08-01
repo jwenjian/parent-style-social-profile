@@ -17,7 +17,7 @@
     <div class="hidden tips" ref="ref-9" >这些看似 [俗气] 的微信昵称</div>
     <div class="hidden tips" ref="ref-10">却正是他们饱经岁月洗礼的最好证据</div>
     <div class="hidden tips" ref="ref-11">现在，再点击一次</div>
-    <div class="hidden tips" ref="ref-12">探索属于你的中老年昵称, Go!</div>
+    <div class="hidden tips" ref="ref-12">探索属于你的家长风昵称, Go!</div>
   </div>
 </template>
 
