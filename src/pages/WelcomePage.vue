@@ -4,7 +4,7 @@
       <span class="title">欢迎来到</span>
     </div>
     <div ref="ref-0">
-      <h3>家长微信昵称集散地</h3>
+      <h3>Parent style(家长风格)微信昵称集散地</h3>
     </div>
     <div ref="ref-2"><el-button :type="btnType" @click="nextAnimation">开始探索 -> </el-button>
     </div>
