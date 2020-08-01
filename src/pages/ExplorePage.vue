@@ -1,32 +1,62 @@
 <template>
   <div class="flex-wrapper">
-    <div class="banner">
-    </div>
+    <div class="banner"></div>
     <div class="avatar">
-      <img src="/rose.jpeg" alt="" srcset="">
+      <img src="/rose.jpeg" alt srcset />
+      <h2 id="nickname">{{ nickname }}</h2>
+      <div id="bio">家有俩宝，平安是福！</div>
+    </div>
+    <div class="divider">
+      <p> <img class="hr-span"/> 朋友仅展示最近一个月的朋友圈 <img class="hr-span"/> </p>
+    </div>
+
+    <div class="btn-wrapper">
+      <el-button type="success" @click="randomNext" icon="el-icon-refresh-left">换一个</el-button>
     </div>
   </div>
 </template>
 
 <script>
+const all_names = require("../assets/names.json");
+
 export default {
-  name: 'explore-page',
+  name: "explore-page",
   data() {
-    return {}
-  }
-}
+    return {
+      nickname: "平安是福",
+      names: [],
+    };
+  },
+  methods: {
+    randomNext() {
+      let stop = false;
+      let idx = 0;
+      let new_nickname = "";
+      while (!stop) {
+        idx = Math.floor(Math.random() * this.names.length);
+        new_nickname = this.names[idx];
+        stop = this.nickname !== new_nickname;
+      }
+
+      this.nickname = new_nickname;
+    },
+  },
+  mounted() {
+    this.names = all_names;
+  },
+};
 </script>
 
 <style>
 .flex-wrapper {
-width: min(100vh, 500px);
-height: 100vh;
-margin: auto auto;
-background-color: aliceblue;
+  width: min(100vh, 500px);
+  height: 100vh;
+  margin: auto auto;
+  background-color: white;
 }
 
 .banner {
-  background-image: url('/banner.jpeg');
+  background-image: url("/banner.jpeg");
   height: 40vh;
   background-size: cover;
 }
@@ -40,4 +70,37 @@ background-color: aliceblue;
   margin-right: 10px;
 }
 
+#nickname {
+  float: right;
+  margin-top: -50px;
+  margin-right: 1em;
+  color: white;
+  letter-spacing: 0.1em;
+}
+
+#bio {
+  padding-top: 40px;
+  text-align: right;
+  color: #757474;
+}
+
+.divider {
+  margin-top: 100px;
+  text-align: center;
+  color: #757474;
+  font-size: x-small;
+}
+
+.hr-span {
+  border-top: 1px solid #ded5d5 ;
+  margin-right: 1em;;
+  margin-left: 1em;;
+  width: 2em;
+  vertical-align: middle;
+  display: inline;
+}
+
+.btn-wrapper {
+  text-align: center;
+}
 </style>
