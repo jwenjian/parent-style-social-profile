@@ -7,11 +7,14 @@
       <div id="bio">家有俩宝，平安是福！</div>
     </div>
     <div class="divider">
-      <p> <img class="hr-span"/> 朋友仅展示最近一个月的朋友圈 <img class="hr-span"/> </p>
+      <p>
+        <img class="hr-span" /> 朋友仅展示最近一个月的朋友圈
+        <img class="hr-span" />
+      </p>
     </div>
 
     <div class="btn-wrapper">
-      <el-button type="success" @click="randomNext" icon="el-icon-refresh-left">换一个</el-button>
+      <el-button type="success" @click="randomNext" icon="el-icon-refresh-left">换一个昵称</el-button>
     </div>
   </div>
 </template>
@@ -92,9 +95,9 @@ export default {
 }
 
 .hr-span {
-  border-top: 1px solid #ded5d5 ;
-  margin-right: 1em;;
-  margin-left: 1em;;
+  border-top: 1px solid #ded5d5;
+  margin-right: 1em;
+  margin-left: 1em;
   width: 2em;
   vertical-align: middle;
   display: inline;
