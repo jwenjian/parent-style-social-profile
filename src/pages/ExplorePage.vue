@@ -16,6 +16,13 @@
     <div class="btn-wrapper">
       <el-button type="success" @click="randomNext" icon="el-icon-refresh-left">换一个昵称</el-button>
     </div>
+
+    <div class="info">
+      <hr>
+      <p>昵称数据来源于 <a href="https://www.bilibili.com/video/BV14z4y1d7n3" target="_blank" rel="noopener noreferrer">酒醉的蝴蝶视频弹幕</a></p>
+      <p>图片来自 <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">Unsplash.com</a></p>
+      <p>代码托管在 <a href="https://github.com/jwenjian/parent-style-social-profile" target="_blank" rel="noopener noreferrer">Github</a> </p>
+    </div>
   </div>
 </template>
 
@@ -104,6 +111,15 @@ export default {
 }
 
 .btn-wrapper {
+  margin-top: 3em;
   text-align: center;
+}
+
+.info {
+  margin-top: 10vh;
+  padding-left: 2em;
+  text-align: left;
+  font-size: xx-small;
+  color: #757474;
 }
 </style>
