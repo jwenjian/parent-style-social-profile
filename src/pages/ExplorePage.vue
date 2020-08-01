@@ -59,7 +59,7 @@ export default {
 
 <style>
 .flex-wrapper {
-  width: min(100vh, 500px);
+  max-width: min(100vh, 500px);
   height: 100vh;
   margin: auto auto;
   background-color: white;
